@@ -24,6 +24,7 @@ services:
 
   # ── API (FastAPI) ────────────────────────────────────────
   api:
+    image: decodelabs-api:latest
     build:
       context: ./api
       dockerfile: Dockerfile
@@ -59,6 +60,7 @@ services:
 
   # ── Worker (Python) ─────────────────────────────────────
   worker:
+    image: decodelabs-worker:latest
     build:
       context: ./worker
       dockerfile: Dockerfile
@@ -91,6 +93,7 @@ services:
 
   # ── Frontend (Node.js / Express) ────────────────────────
   frontend:
+    image: decodelabs-frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
